@@ -21,7 +21,9 @@ export default function Phonetic(props) {
   if (props.phonetic.audio) {
     return (
       <span className="Phonetic">
-        <button onClick={handleClick}>{vomumeIcon}</button>
+        <button className="volume-button" onClick={handleClick}>
+          {vomumeIcon}
+        </button>
         <span className="phonetic-text">{props.phonetic.text}</span>
       </span>
     );

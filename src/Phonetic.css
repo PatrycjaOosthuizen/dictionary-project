@@ -3,7 +3,7 @@
   margin-bottom: 8px;
   opacity: 0.8;
 }
-.Phonetic button {
+.Phonetic .volume-button {
   background-color: rgb(215, 214, 214);
   border: 1px solid rgb(183, 183, 183);
   border-radius: 50%;
@@ -11,10 +11,11 @@
   font-size: 20px;
   line-height: 0.6;
   margin-right: 12px;
+  margin-bottom: 5px;
   padding: 8px;
   transition: 200ms all ease-in-out;
 }
-.Phonetic button:hover {
+.Phonetic .volume-button:hover {
   background-color: rgb(154, 146, 146);
   color: rgb(243, 242, 242);
 }
@@ -22,7 +23,7 @@
   .Phonetic .phonetic-text {
     font-size: 14px;
   }
-  .Phonetic button {
+  .Phonetic .volume-button {
     font-size: 15px;
   }
 }
