@@ -1,21 +1,32 @@
-import React from "react";
-import ReactAudioPlayer from "react-audio-player";
+import React, { useState } from "react";
+import { FaVolumeUp, FaRegPlayCircle } from "react-icons/fa";
 import "./Phonetic.css";
 
 export default function Phonetic(props) {
+  const [vomumeIcon, setVolumeIcon] = useState(<FaVolumeUp />);
+  function handleClick() {
+    let audio = new Audio(props.phonetic.audio);
+    if (audio.paused) {
+      audio.play();
+      setVolumeIcon(<FaRegPlayCircle />);
+      audio.onended = function () {
+        setVolumeIcon(<FaVolumeUp />);
+      };
+    } else {
+      audio.pause();
+      audio.currentTime = 0;
+      setVolumeIcon(<FaVolumeUp />);
+    }
+  }
   if (props.phonetic.audio) {
     return (
-      <div className="Phonetic">
-        <div className="phonetic-text">{props.phonetic.text}</div>
-        <ReactAudioPlayer
-          src={props.phonetic.audio}
-          autoPlay={false}
-          controls
-        />
-      </div>
+      <span className="Phonetic">
+        <button onClick={handleClick}>{vomumeIcon}</button>
+        <span className="phonetic-text">{props.phonetic.text}</span>
+      </span>
     );
   } else {
     return null;
   }
 }
-//React Audio Player instakation document: https://www.npmjs.com/package/react-audio-player
+//React Icons : https://react-icons.github.io/react-icons/

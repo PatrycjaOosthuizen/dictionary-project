@@ -9,3 +9,11 @@
   font-style: italic;
   margin: 10px 0;
 }
+@media (max-width: 570px) {
+  .Meaning .definition {
+    font-size: 14px;
+  }
+  .Meaning .example {
+    font-size: 12px;
+  }
+}
