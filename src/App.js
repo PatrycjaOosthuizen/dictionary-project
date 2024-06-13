@@ -8,9 +8,10 @@ export default function App() {
       <div className="container">
         <header className="App-header">
           <img src={logo} className="App-logo img-fluid" alt="logo" />
+          <h1>Panda Dictionary</h1>
         </header>
         <main>
-          <Dictionary />
+          <Dictionary defaultKeyword="rainbow" />
         </main>
         <footer className="App-footer">
           <small>

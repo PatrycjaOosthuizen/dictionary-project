@@ -1,5 +1,6 @@
 import React from "react";
 import ReactAudioPlayer from "react-audio-player";
+import "./Phonetic.css";
 
 export default function Phonetic(props) {
   if (props.phonetic.audio) {
@@ -10,7 +11,6 @@ export default function Phonetic(props) {
           src={props.phonetic.audio}
           autoPlay={false}
           controls
-          className="audio-player-container"
         />
       </div>
     );
