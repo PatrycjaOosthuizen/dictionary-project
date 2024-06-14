@@ -11,41 +11,37 @@
   margin-bottom: 20px;
 }
 .Dictionary input {
-  width: 85%;
+  width: 72%;
   border-radius: 6px;
-  padding: 7px 10px;
+  padding: 6px 10px;
+  margin: 0 8px;
   color: #333;
   border: 1px solid #ddd;
 }
-.Dictionary button {
+.Dictionary .btn-search {
   background-color: rgb(215, 214, 214);
   border-radius: 6px;
-  padding: 6px 31px;
   color: #312727;
-  margin: 0 8px;
+  width: 23%;
+  inset-inline: unset;
   border: 1px solid #ddd;
 }
-.Dictionary button:hover {
+.Dictionary .btn-search:hover {
   opacity: 0.7;
 }
-
 .Dictionary .hint {
   font-size: 11px;
-  margin-top: 5px;
+  margin: 5px 12px 0;
 }
+
 @media (max-width: 570px) {
   .Dictionary h3 {
     text-align: center;
   }
   .Dictionary input {
-    width: 65%;
+    margin: 0 3px;
   }
-  .Dictionary button {
-    font-size: 15px;
-    padding: 7.5px 14px;
-  }
-
   .Dictionary .hint {
-    text-align: center;
+    margin: 5px 6px 0;
   }
 }
